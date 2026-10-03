@@ -6,19 +6,35 @@ function performOperation() {
 // Check if inputs are valid numbers
     if (!isNaN(num1) && !isNaN(num2)) {
 // Perform the operation
-    let result = multiply(num1, num2);
+        let result = multiply(num1, num2);
 // Display the result
-    displayResult(result);
-} else {
-    displayResult('Please enter valid numbers');
-}
+        isplayResult(result);  
+    } else {
+        displayResult('Please enter valid numbers');
+    }
 }
     
+function performSubstraction() {
+    let num1 = parseInt(document.getElementById('input1').value);
+    let num2 = parseInt(document.getElementById('input2').value);
+    if (!isNaN(num1) && !isNaN(num2)) {  
+        let result = substract(num1, num2);
+        displayResult(result);  
+    } else {
+        displayResult('Please enter valid numbers');
+    }
+}
+
 function multiply(a, b) {
 // Introduce a debugger statement to pause execution
     debugger;
 // Multiply the numbers
     return a * b;
+}
+
+function substract(a, b) {
+    debugger
+    return a - b;
 }
 
 function displayResult(result) {
